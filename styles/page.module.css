@@ -6,7 +6,23 @@
   padding: 6rem;
   min-height: 100vh;
 }
-
+.button {
+  background-color: green;
+  color: white;
+  cursor: pointer;
+  border-radius: 30px;
+  position: relative;
+  top: -150px;
+  border: none;
+  padding: 16px 32px;
+  font-size: 20px;
+  font-family:'Courier New', Courier, monospace;
+  transition-duration: 0.4s;
+}
+.button:hover {
+  background-color: rgb(7, 93, 7);
+  
+}
 .description {
   display: inherit;
   justify-content: inherit;
@@ -107,6 +123,7 @@
 
 .logo {
   position: relative;
+  top: -200px;
 }
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
@@ -216,7 +233,7 @@
   }
 
   .logo {
-    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
+    filter: invert(0) drop-shadow(0 0 0.3rem #ffffff70);
   }
 }
 
@@ -228,3 +245,4 @@
     transform: rotate(0deg);
   }
 }
+
