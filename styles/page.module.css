@@ -24,8 +24,10 @@
   
 }
 .description {
+  top: 300px;
+  position: absolute;
   display: inherit;
-  justify-content: inherit;
+  justify-content: center;
   align-items: inherit;
   font-size: 0.85rem;
   max-width: var(--max-width);
@@ -124,8 +126,8 @@
 .logo {
   font-size: 100px;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  position: relative;
-  top: -200px;
+  position:absolute;
+  
 }
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
