@@ -9,7 +9,7 @@ export default function Home() {
         <p>Let's correct that playlist. </p>
       </div>
       <div className={styles.center}>
-          <p className={styles.logo}>Rectify.</p>
+          <p className={styles.logo}>Rectify</p>
       </div>
       
       
