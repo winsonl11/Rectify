@@ -13,7 +13,7 @@ export default function Home() {
       <div className={styles.center}>
           <p className={styles.logo}>Rectify.</p>
       </div>
-      <button className={styles.button} onClick={() => signIn('spotify', { callbackUrl: "/" })}>Log into Spotify</button>
+      <button className={styles.button} onClick={() => signIn('spotify')}>Log into Spotify</button>
       
 
       
