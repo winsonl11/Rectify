@@ -1,7 +1,5 @@
-"use client"
+import Image from "next/image";
 import styles from "/styles/page.module.css";
-import { signIn } from 'next-auth/react';
-
 
 
 export default function Home() {
@@ -13,7 +11,7 @@ export default function Home() {
       <div className={styles.center}>
           <p className={styles.logo}>Rectify.</p>
       </div>
-      <button className={styles.button} onClick={() => signIn('spotify', { callbackUrl: "/" })}>Log into Spotify</button>
+      
       
 
       
