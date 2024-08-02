@@ -1,13 +1,15 @@
-// src/app/layout.js
-
-import Image from 'next/image';
+"use client"
+import { SessionProvider } from "next-auth/react";
 import '/styles/globals.css';
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children, session}) {
+  
   return (
     <html lang="en">
       <body>
-        {children}
+        <SessionProvider session={session}>
+          {children}
+        </SessionProvider>
       </body>
     </html>
   );

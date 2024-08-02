@@ -1,22 +1,19 @@
 "use client"
-import Image from "next/image";
+import { signIn, useSession, getSession} from "next-auth/react";
 import styles from "/styles/page.module.css";
 import "@/styles/globals.css";
 import DropDownMenu from "@/components/dropdown.js"
+import Navbar from "@/components/navbar.js"
 
-const dashboard = () => {
+export default function Recommender(){
+  const { data: session, status} = useSession();
+  console.log(session, status);
   
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>Let's correct that playlist. </p>
-      </div>
-      <div className={styles.center}>
-          <p className={styles.logo}>Rectify</p>
-      </div>
-      <DropDownMenu/>
-    </main>
-  );
-}
+    return (
+     <main className="flex flex-col justify-between min-h-screen items-center">
+       <Navbar/>
+       <DropDownMenu/>
+     </main>
+   );
+  } 
 
-export default dashboard
