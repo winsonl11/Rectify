@@ -1,10 +1,8 @@
 "use client"
 import { useEffect, useState } from "react";
-import { signIn, useSession, getSession} from "next-auth/react";
 import clsx from 'clsx';
 import { Label, Listbox, ListboxButton, ListboxOption, ListboxOptions } from '@headlessui/react';
 import { CheckIcon, ChevronDownIcon } from '@heroicons/react/20/solid';
-import spotifyApi from "@/lib/spotify.js"
 const people = [
     { id: 1, name: 'Tom Cook' },
     { id: 2, name: 'Wade Cooper' },
@@ -15,8 +13,7 @@ const people = [
 
 
 const DropDownMenu = () => {
-    const [selected, setSelected] = useState(people[1]);
-    const { data: session } = useSession();
+    const [selected, setSelected] = useState(people[1]);    
     return (
         <div className="mx-auto h-22 w-52 flex justify align-items relative -top-5">
             <Listbox value={selected} onChange={setSelected}>
@@ -52,7 +49,6 @@ const DropDownMenu = () => {
                     ))}
                 </ListboxOptions>
             </Listbox>
-            <button className="relative -right-5" onClick={''}>YO</button>
         </div>
 
     );

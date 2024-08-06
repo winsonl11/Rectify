@@ -1,5 +1,23 @@
+"use client"
 import React from "react";
 import Link from "next/link";
+import {useSession, signIn, signOut} from "next-auth/react";
+function AuthButton() {
+  const { data: session } = useSession();
+  if(session){
+    return(
+      <>
+      <button onClick={() => signOut()}> Sign Out </button>
+      </>
+    );
+  }
+  return (
+    <>
+      <button onClick={() => signIn("spotify")}> Sign In </button>
+    </>
+  );
+}
+
 const Navbar = () => {
   return (
     <>
@@ -19,6 +37,9 @@ const Navbar = () => {
                 {/* <Link href="/services"> */}
                   <p className="font-franklin text-xl">Explorer</p>
                 {/* </li>//</Link> */}
+              </li>
+              <li>
+                <AuthButton/>
               </li>
             </ul>
             

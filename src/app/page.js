@@ -1,4 +1,3 @@
-
 "use client"
 import styles from "/styles/page.module.css";
 import { signIn } from 'next-auth/react';
@@ -6,6 +5,9 @@ import { signIn } from 'next-auth/react';
 
 
 export default function Home() {
+  const handleLogin = () => {
+    signIn("spotify", { callbackUrl: "http://localhost:3000" });
+  };
   return (
     <main className={styles.main}>
       <div className={styles.description}>
@@ -14,7 +16,7 @@ export default function Home() {
       <div className={styles.center}>
           <p className={styles.logo}>Rectify.</p>
       </div>
-      <button className={styles.button} onClick={() => signIn('spotify')}>Log into Spotify</button>
+      <button className={styles.button} onClick={handleLogin}>Log into Spotify</button>
     </main>
   );
 }
